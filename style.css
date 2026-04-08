@@ -1039,53 +1039,53 @@ body {
     color: white;
     z-index: 10000000000000000;
 }
-/* 🎂 Cake Animation */
+/* 🎂 BIG CAKE */
 .cake {
     position: absolute;
-    bottom: 40px;
+    bottom: 60px;
     left: 50%;
     transform: translateX(-50%);
-    width: 120px;
-    z-index: 2;
+    width: 180px;
+    z-index: 5;
 }
 
-/* Cake base */
+/* Base */
 .cake .layer {
-    width: 120px;
-    height: 60px;
+    width: 180px;
+    height: 90px;
     background: #ff9aa2;
-    border-radius: 10px;
+    border-radius: 15px;
 }
 
 /* Cream */
 .cake .icing {
-    width: 120px;
-    height: 20px;
+    width: 180px;
+    height: 30px;
     background: #fff;
     position: absolute;
-    top: -10px;
-    border-radius: 10px;
+    top: -15px;
+    border-radius: 15px;
 }
 
 /* Candle */
 .cake .candle {
-    width: 10px;
-    height: 30px;
+    width: 12px;
+    height: 40px;
     background: #333;
     position: absolute;
-    top: -40px;
-    left: 55px;
+    top: -55px;
+    left: 84px;
 }
 
 /* Flame */
 .cake .flame {
-    width: 10px;
-    height: 15px;
+    width: 12px;
+    height: 18px;
     background: orange;
     border-radius: 50%;
     position: absolute;
-    top: -55px;
-    left: 55px;
+    top: -75px;
+    left: 84px;
     animation: flame 0.5s infinite alternate;
 }
 
