@@ -32,7 +32,7 @@ body {
     background-image: linear-gradient(0deg, transparent 24%, rgba(255, 255, 255, 1) 25%, rgba(255, 255, 255, 1) 26%, transparent 27%, transparent 74%, rgba(255, 255, 255, 1) 75%, rgba(255, 255, 255, 1) 76%, transparent 77%, transparent), linear-gradient(90deg, transparent 24%, rgba(255, 255, 255, 1) 25%, rgba(255, 255, 255,1) 26%, transparent 27%, transparent 74%, rgba(255, 255, 255, 1) 75%, rgba(255, 255, 255, 1) 76%, transparent 77%, transparent);
     height:100%;
     background-size:80px 80px;
-    overflow: hidden;
+    overflow: visible;
     z-index: 1;
 }
 .flag__birthday{
@@ -1039,42 +1039,60 @@ body {
     color: white;
     z-index: 10000000000000000;
 }
-/* 🎂 BIG CAKE */
+/* 🎂 SECTION FULL FILL */
+.cake-section {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 🎂 CAKE DESIGN */
 .cake {
-    position: absolute;
-    bottom: 60px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 180px;
-    z-index: 5;
+    position: relative;
+    width: 200px;
 }
 
-/* Base */
-.cake .layer {
-    width: 180px;
-    height: 90px;
-    background: #ff9aa2;
+/* Layers */
+.cake .bottom {
+    width: 200px;
+    height: 80px;
+    background: #ff6f7d;
     border-radius: 15px;
 }
 
-/* Cream */
-.cake .icing {
-    width: 180px;
-    height: 30px;
+.cake .middle {
+    width: 160px;
+    height: 60px;
+    background: #ff8fa3;
+    border-radius: 12px;
+    position: absolute;
+    top: -50px;
+    left: 20px;
+}
+
+.cake .top {
+    width: 120px;
+    height: 40px;
     background: #fff;
+    border-radius: 10px;
     position: absolute;
-    top: -15px;
-    border-radius: 15px;
+    top: -80px;
+    left: 40px;
 }
 
 /* Candle */
 .cake .candle {
-    width: 12px;
+    width: 10px;
     height: 40px;
-    background: #333;
+    background: black;
     position: absolute;
-    top: -55px;
-    left: 84px;
+    top: -110px;
+    left: 95px;
 }
 
 /* Flame */
@@ -1084,12 +1102,58 @@ body {
     background: orange;
     border-radius: 50%;
     position: absolute;
-    top: -75px;
-    left: 84px;
-    animation: flame 0.5s infinite alternate;
+    top: -130px;
+    left: 94px;
+    animation: flame 0.4s infinite alternate;
 }
 
 @keyframes flame {
     from { transform: scale(1); }
-    to { transform: scale(1.3); }
+    to { transform: scale(1.4); }
+}
+
+/* Button */
+#cutCake {
+    margin-top: 20px;
+    padding: 10px 25px;
+    border-radius: 25px;
+    border: none;
+    background: #ff4d6d;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+} 
+/* ❤️ Floating hearts */
+.heart {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: red;
+    transform: rotate(45deg);
+    animation: float 6s linear infinite;
+    z-index: 999;
+}
+
+.heart::before,
+.heart::after {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: #ff4d6d;
+    border-radius: 50%;
+}
+
+.heart::before { top: -7px; left: 0; }
+.heart::after { left: -7px; top: 0; }
+
+@keyframes float {
+    0% {
+        transform: translateY(0) rotate(45deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-600px) rotate(45deg);
+        opacity: 0;
+    }
 }
