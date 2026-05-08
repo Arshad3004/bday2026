@@ -925,8 +925,8 @@ body {
 .boxMail .boxMail-container .card2 h3{
     font-family: 'Dancing Script', cursive;
     padding: 20px 0px 10px 60px;
-    opacity: 0;
-    visibility: hidden;
+    opacity: 1;
+    visibility: visible;
     font-size: 25px;
     text-shadow: 0 0 8px #FF7882;
 }
@@ -952,13 +952,9 @@ body {
     padding: 0px 20px;
     text-indent: 20px;
     font-size: 22px;
-    opacity: 0;
+    opacity: 1;
 }
-.boxMail .boxMail-container .card2:hover h2{
-    animation: texth2 2s forwards;
-    animation-delay: 4s;
-    transition: 1s;
-}
+
 @keyframes texth2{
     0%{
         opacity: 0;
