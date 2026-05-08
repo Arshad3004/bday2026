@@ -592,10 +592,11 @@ body {
     animation: opacityHeart 1s 1s forwards;
 }
 .content__letter .right .text__letter{
-    margin-top: 60px;
-    padding: 20px 15px 10px 15px;
+    margin-top: -18px;
+    padding: 8px 10px 5px 10px;
     font-family: 'Dancing Script', cursive;
-    font-size: 1.3rem;
+    font-size: .72rem;
+    line-height: 1.2;
 }
 .content__letter .right #mewmew{
     position: absolute;
@@ -706,7 +707,7 @@ body {
     .box__letter .letter__border {
         position: absolute;
         width: 90vw;
-        height: 315px;
+        height: 340px;
         background-color: var(--color-white);
         border-radius: 27px;
         padding: 17px;
@@ -950,8 +951,8 @@ body {
 .boxMail .boxMail-container .card2 h2{
     font-family: 'Dancing Script', cursive;
     padding: 0px 20px;
-    text-indent: 20px;
-    font-size: 22px;
+    text-indent: 15px;
+    font-size: 20px;
     opacity: 1;
 }
 
